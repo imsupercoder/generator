@@ -10,6 +10,8 @@ import ${basepackage}.dao.${className}Dao;
 import ${basepackage}.model.${className};
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 
 <#include "/java_imports.include">
 
@@ -18,7 +20,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Transactional
-public class ${className}ManagerImpl implements ${className}Manager {
+public class ${className}ServiceImpl implements ${className}Service {
 
 	@Autowired
 	private ${className}Dao ${classNameLower}Dao;

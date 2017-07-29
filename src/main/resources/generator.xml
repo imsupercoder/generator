@@ -18,7 +18,7 @@
     <entry key="tableRemovePrefixes">false</entry>
 
     <entry key="jdbc_username">root</entry>
-    <entry key="jdbc_password">123</entry>
+    <entry key="jdbc_password">@lei881030</entry>
 
     <!-- oracle需要指定jdbc.schema,其它数据库忽略此项配置  -->
     <entry key="jdbc_schema">caton</entry>
@@ -37,7 +37,7 @@
     <entry key="jdbc.driver">org.h2.Driver</entry>
     -->
 
-    <entry key="jdbc_url">jdbc:mysql://127.0.0.1:3306/caton?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT%2B8&amp;useSSL=true&amp;nullNamePatternMatchesAll=true</entry>
+    <entry key="jdbc_url">jdbc:mysql://39.108.45.202:3306/caton?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT%2B8&amp;useSSL=true&amp;nullNamePatternMatchesAll=true</entry>
     <entry key="jdbc_driver">com.mysql.cj.jdbc.Driver</entry>
 
     <!-- Oracle  jdbc:oracle:oci:@tnsname_devdb

@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.*;
 
 <#include "/java_imports.include">
 
+/**
 <#include "/java_description.include">
- *
  */
 @RestController
 @RequestMapping("/${classNameLowerCase}")

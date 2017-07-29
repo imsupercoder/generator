@@ -22,8 +22,8 @@ import org.springframework.stereotype.Repository;
 public class ${className}DaoImpl extends SmartDaoSupport<${className}> implements ${className}Dao{
 	
 	@Override
-    public List<User> findList(Map<String, String> params) {
-        String sql = SQLUtil.queryAllSql(User.class);
+    public List<${className}> findList(Map<String, String> params) {
+        String sql = SQLUtil.queryAllSql(${className}.class);
         List<String> values = new LinkedList<>();
 		/*
         if(StringUtil.isNotEmpty(params.get("userName"))) {
@@ -36,7 +36,7 @@ public class ${className}DaoImpl extends SmartDaoSupport<${className}> implement
         }*/
 		//TODO. 按照示例填充SQL和请求参数
         sql = sql.replaceFirst("and","where");
-        return getJdbcTemplate().query(sql,BeanPropertyRowMapper.newInstance(User.class),values.toArray(new String[0]));
+        return getJdbcTemplate().query(sql,BeanPropertyRowMapper.newInstance(${className}.class),values.toArray(new String[0]));
     }
 
 }
