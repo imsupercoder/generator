@@ -35,8 +35,8 @@ public class ${className}ServiceImpl implements ${className}Service {
 	/** 
 	 * 删除${className}
 	 **/
-    public void delete(String id) {
-        this.${classNameLower}Dao.delete(id);
+    public int delete(String id) {
+        return this.${classNameLower}Dao.delete(id);
     }
     
 	/** 
