@@ -26,20 +26,21 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/${classNameLowerCase}")
 public class ${className}Controller extends BaseController{
-	
+
+    @Autowired
 	private ${className}Service ${classNameFirstLower}Service;
 
-	@RequestMapping(value = "/${classNameLowerCase}s.do",method = RequestMethod.POST)
+	@RequestMapping(value = "/${classNameLowerCase}s",method = RequestMethod.GET)
     public List<${className}> list(HttpServletRequest request){
         return ${classNameFirstLower}Service.findList(RequestUtil.getParamMap(request));
     }
-    @RequestMapping(value ="/delete.do",method = RequestMethod.POST)
+    @RequestMapping(value ="/delete",method = RequestMethod.POST)
     public Map<String,Object> delete(@RequestParam("id")String id){
         Map<String,Object> returnMap = new HashMap<>();
         returnMap.put("flag",${classNameFirstLower}Service.delete(id)==1?true:false);
         return returnMap;
     }
-    @RequestMapping(value ="/${classNameFirstLower}.do",method = RequestMethod.POST)
+    @RequestMapping(value ="/${classNameFirstLower}",method = RequestMethod.POST)
     public Map<String,Object> insertOrUpdate(@RequestBody ${className} ${classNameFirstLower}){
         Map<String,Object> returnMap = new HashMap<>();
         returnMap.put("flag",${classNameFirstLower}Service.insertOrUpdate(${classNameFirstLower})==1?true:false);
